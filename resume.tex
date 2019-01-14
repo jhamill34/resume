@@ -1,0 +1,140 @@
+%-------------------------
+% Resume in Latex
+% Author : Joshua Rasmussen
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Personal Information
+\newcommand{\CVName}{JOSHUA L. RASMUSSEN}
+\newcommand{\CVAddress}{12121 Admiralty Way \#J201 Everett, WA 98204 }
+% \newcommand{\CVAddressTwo}{Everett, WA 98204}
+\newcommand{\CVPhone}{(425) 760 - 9918}
+\newcommand{\CVEmail}{xlr8runner@gmail.com}
+\newcommand{\CVWebsite}{http://www.joshrasmussen.com}
+\newcommand{\CVGithub}{https://github.com/xlr8runner}
+\newcommand{\CVLinkedin}{https://www.linkedin.com/in/josh-rasmussen-95023490}
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{4pt}\item
+    \begin{tabular*}{0.97\textwidth}{p{0.7\textwidth} @{\extracolsep{\fill}} r}
+      \textbf{#1} & #2 \\
+      \raggedright{\textit{\small#3}} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\large\bf\CVName} & \CVAddress \\
+  \CVWebsite & \CVEmail \\
+   & \CVPhone
+\end{tabular*}
+
+%-----------OBJECTIVE-----------------
+\section{Objective}
+  {Curious software engineer with a deep love of both teaching and learning mathematics. I'm looking to apply my experience in both fields to develop solutions that help students achieve content mastery. }
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Seattle Pacific University}{Seattle, WA}
+      {Masters in Teaching Math and Science (MTMS) \newline Endorsement in Secondary Level Mathematics}{June. 2017 -- Aug. 2018}
+    \resumeSubheading
+      {University of Washington}{Seattle, WA}
+      {Bachelors of Science in Electrical Engineering \newline Concentration in VLSI and Embedded Systems}{Sep. 2012 -- June. 2014}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Snohomish School District - 201}{Snohomish, WA}
+      {Student Teaching}{Sept. 2017 - June 2018}
+      \resumeItemListStart
+        \resumeItem{General Classes}
+          {Taught two sections of Algebra 1, two sections of Pre-Calculus, as well as a support Algebra class that provides hands on activities to students to supplement their learning.}
+        \resumeItem{Academic Learning Lab}
+          {Assisted in an after-school tutoring program where I was able to work with a diverse set of learners one-on-one for an hour every day.}
+        \resumeItem{Instruction}
+          {Planned lessons, provided instruction, and assessed 150+ students throughout the semester.}
+        \resumeItem{Feedback}
+          {Systematically provided feeback to students to assist in their learning using formative assessment.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Dealer Information Systems}{Bellingham, WA}
+      {Mobile App Developer}{May 2015 - June 2017}
+      \resumeItemListStart
+        \resumeItem{Front End}{Developed and maintained Service Logistics iOS application for technitions to use in the field to keep track of workorders, part inventory, and price quotes. Developed in Objective-C. }
+        \resumeItem{Back End}{Maintained server side code using Java/Springboot which helped route information from the technitian tablets to various back office systems.}
+        \resumeItem{Initial Install Speed Up}{ Developed a solution to improve initial install of application from 1 hour to less than 10 minutes. }
+        \resumeItem{Data Versioning System}{ Developed a solution to improve data integrity accross all clients that involved maintaining a data change log on the server side code.  }
+        \resumeItem{Agile Methodologies}{Worked on a team that valued test driven development, code reviews, and collaboration. }
+        \resumeItem{Mentorship}{Mentored 6 interns from WWU in programming related knowledge for internal company projects. }
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Micron Technology}{Boise, ID}
+      {DRAM Burin-in Test Engineer}{Nov. 2014 - May 2015}
+      \resumeItemListStart
+        \resumeItem{DDR3 SDRAM}{Developed and maintained testing software in C/C++ for various DRAM products focusing on infant and latent stresses as well as funtionality and repair configurations under a wide range of temperature conditions. }
+        \resumeItem{Data Analysis}{Analyzed test results in Python to determine product defects to communicate back to product engineering. }
+        \resumeItem{Data Visualization}{ Developed a dashboard in D3.js to automate common data visualizations that were requested. }
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {University of Washington}{Seattle, WA}
+      {Web Development Teaching Assistent}{March 2014 - June 2014}
+      \resumeItemListStart
+        \resumeItem{Instruction}
+          {Taught 25 students web development principles using content such as HTML, CSS, JavaScript, PHP, and SQL. Provided feedback on homework assignments and exams. Provided support for students by holding office hours throughout the week. }
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\end{document}
