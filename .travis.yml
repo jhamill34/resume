@@ -1,0 +1,13 @@
+sudo: required
+dist: xenial
+services: docker
+script:
+  - docker run --rm -i --user="$(id -u):$(id -g)" --net=none -v "$PWD":/data blang/latex:ubuntu latexmk -pdf resume.tex
+deploy:
+  provider: releases
+  api_key:
+    secure: zGpD7cEZbxBL+xcJGPGMiBUUaFygxIT4aL7TEP0m3rALMkT3ULLkJxv4PIUVnQ7TshkJG7XEhR3P3ym3Cvkoda9LZZMWSsm32eMyvATF3yGyOeznKB1neT2UDgqXwo7AltJCg60yfy7V9NNhCxnJVm0sk+ak4p0F3CzN3k1dvSCHxwEf8Wj4Tz06xPCwbwPlNUTWjSXShA/ixeOGVvZUHtys6X+mfqwB/jlvWBWFXWY2v6AJjCKBOBZ/5vHHeO1msEtxWswPickj/3WlMY800D9TMbj1WthVwEvG0DLCPCe3qD+OrFZFftznUxAsg9VT1o/7sYv3RkdZ/S7wuab4qh6ZUlK6o6GEY7qvblDfsTVF1zlCfTeWWZrcJXBIddY6CX0D5OdS0BZvCk5omJKjhxumRP6Qo2cyFfnOOaHnH+I+xMjw8b6c3GKmdfpIHtX4AE5z/3SoRQw5fdK1mKNh8yUFKjh69dK4MTn2vd0emmyjFFy4tDt3WyTJsW009yI5KTNgK/qlKA3Oute6fAFW5tT0xmzYgYpRTJ7doir++lCsuXNanrw+doJSlGhQgx4raDyKhEBa3ixSxmEaU6Ak+Ieu98hXzelvM1x0yiKLaUvapDsAsk3yeC46oNlbK6OXx8J3ojQ/cWczyoAe3aNpbMYxWdGKbkZpPv+Blfvf/8I=
+  file: resume.pdf
+  skip_cleanup: true
+  on:
+    tags: true
